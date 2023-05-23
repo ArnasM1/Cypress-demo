@@ -4,19 +4,17 @@
   "description": "automation practice",
   "main": "cypress.config.js",
   "scripts": {
-
     "test": "npx cypress run --reporter mochawesome",
-    "parallelTest" : "cypress-parallel -s test -t 4 -d '**/cypress/e2e/*.cy.js'",
+    "parallelTest": "cypress-parallel -s test -t 4 -d '**/cypress/e2e/*.cy.js'",
     "merge:reports": "mochawesome-merge mochawesome-report/*.json > cypress tests-report.json",
     "create:html:report": "marge --reportDir TestReport cypress-tests-report.json",
     "generate:html:report": "npm run merge:reports && npm run create:html:report",
-    "postparallelTest":"npm run generate:html:report"
-
-
+    "postparallelTest": "npm run generate:html:report"
   },
   "author": "Arnas",
   "license": "ISC",
   "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
     "cypress": "^12.12.0",
     "cypress-mochawesome-reporter": "^3.4.0",
     "cypress-parallel": "^0.13.0",
