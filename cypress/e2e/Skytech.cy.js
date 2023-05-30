@@ -16,7 +16,7 @@
 
 let buttonCount;
 let currentCount;
-let $buttons;
+
 describe("Skytech.lt Test", () => {
   it("should perform the specified actions", async () => {
     await step1();
@@ -103,8 +103,7 @@ describe("Skytech.lt Test", () => {
       await cy.log('STEP 7.2 Start');
 
       await cy.get('input.icon-cart').last().click();
-      // await cy.get('input.icon-cart').should('be.visible')
-      // await cy.get('input.icon-cart').click();
+
 
 
       // 7.3 Open the last item from the list
